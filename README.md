@@ -1,4 +1,4 @@
-# Seja bem-vindo, ao meu Portifolio!
+# Seja bem-vindo, ao meu Portfolio!
 *Portifolio Jonatan Abade*  
 **Segue abaixo mais sobre este respositório.**
 ---
@@ -7,6 +7,7 @@
 Nesse sistema é utilizado:
 
 * PHP Orientenado a Objetos
+* Arquitetura MVC
 * __JS__
 * MySQL. 
 * HTML5 + CSS
