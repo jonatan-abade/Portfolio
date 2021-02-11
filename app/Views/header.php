@@ -1,8 +1,7 @@
 <?php
 include './../app/config.php';
-include './../app/libraries/Rota.php';
-include './../app/libraries/Controller.php';
-include './../app/libraries/Database.php';
+include './../app/autoload.php';
+
 $db = new Database();
 ?>
 
@@ -37,7 +36,7 @@ $db = new Database();
                     </ul>
 
                     <span class="navbar-text">
-                        <a class="btn btn-info" href="#" data-tooltip="tooltip" title="Não tem uma conta? Cadastre-se">Cadastre-se</a>
+                        <a class="btn btn-info" href="<?=URL?>usuario/cadastrar.php" data-tooltip="tooltip" title="Não tem uma conta? Cadastre-se">Cadastre-se</a>
                         <a class="btn btn-info" href="#" data-tooltip="tooltip" title="Tem uma conta? Fazer login">Entrar</a>
                     </span>
                 </div>

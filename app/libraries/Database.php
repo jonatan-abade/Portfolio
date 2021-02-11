@@ -55,29 +55,32 @@ class Database
 
         $this->stmt->bindValue($parametro, $valor, $tipo);
     }
-
+    //Executa prepared statemente
     public function executa()
     {
         return $this->stmt->execute();
     }
 
+    //Obtém um único registro
     public function resultado()
     {
         $this->executa();
-        return $this->stmt->fecth(PDO::FETCH_OBJ);
+        return $this->stmt->fetch(PDO::FETCH_OBJ);
     }
-
+    //Obtém um conjunto de registros
     public function resultados()
     {
         $this->executa();
-        return $this->stmt->fecthAll(PDO::FETCH_OBJ);
+        return $this->stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
+    //Retorna o número de linhas afetadas pela última instrução do sql
     public function totalResult()
     {
         return $this->stmt->rowCount();
     }
 
+    //retorna o último ID inserido no banco de Dados
     public function ultimoIdInserido()
     {
         return $this->dbh->lastInsertId();
