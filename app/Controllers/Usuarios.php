@@ -46,7 +46,7 @@ class Usuarios extends Controller
                 'senha' => "",
                 'confirma_senha' => ""
             ];
-        }
+        } 
 
 
         $this->view('usuarios/cadastrar', $dados);
