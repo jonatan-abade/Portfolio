@@ -10,7 +10,7 @@
 //define e const - Define uma constante. As constantes não podem ser alteradas depois de declaradas.
 define('APP',  dirname(__FILE__));
 
-define('URL', 'http://localhost/-Portfolio/');
+define('URL', 'http://localhost/Portfolio/');
 
 define('APP_NOME', 'PHP 7 Orientado a objetos / MVC');
 
