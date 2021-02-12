@@ -1,4 +1,4 @@
-# Seja bem-vindo, ao meu Portfolio!
+# Seja bem-vindo, ao meu projeto Portfolio!
 *Portifolio Jonatan Abade*  
 **Segue abaixo mais sobre este respositório.**
 ---
