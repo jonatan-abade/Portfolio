@@ -1,6 +1,12 @@
 <?php
 class Usuarios extends Controller
 {
+
+    public function __construct()
+    {
+        $this->usuarioModel = $this->model('Usuario');
+    }
+
     public function cadastrar()
     {
         $form = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
@@ -35,10 +41,15 @@ class Usuarios extends Controller
                 } elseif ($form['senha'] != $form['confirma_senha']) {
                     $dados['confirma_senha_erro']  = 'Senhas são diferentes"...';
                 } else {
-                    echo "tudo ok<hr>";
+                    $dados['senha'] = $senhsegura = password_hash($form['senha'], PASSWORD_DEFAULT);
+
+                    if ($this->usuarioModel->Cadastrar($dados)) {
+                        echo 'Cadastro realizado com sucesso<hr>';
+                    } else {
+                        die("Erro ao armazenar no banco de dados");
+                    }
                 }
             }
-            var_dump($form);
         } else {
             $dados = [
                 'nome' => "",
@@ -46,7 +57,7 @@ class Usuarios extends Controller
                 'senha' => "",
                 'confirma_senha' => ""
             ];
-        } 
+        }
 
 
         $this->view('usuarios/cadastrar', $dados);
