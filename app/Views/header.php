@@ -35,10 +35,20 @@ $db = new Database();
                         </li>
                     </ul>
 
-                    <span class="navbar-text">
-                        <a class="btn btn-info" href="<?=URL?>usuarios/cadastrar" data-tooltip="tooltip" title="Não tem uma conta? Cadastre-se">Cadastre-se</a>
-                        <a class="btn btn-info" href="#" data-tooltip="tooltip" title="Tem uma conta? Fazer login">Entrar</a>
-                    </span>
+                    <?php
+                    if (isset($_SESSION['usuario_id'])) {
+                        echo "<span class='navbar-text'>
+                            <p class='text-white'>
+                                Olá " . $_SESSION['usuario_nome'] . ", Seja bem vindo(a)!
+                                <a class='btn btn-sm btn-danger' href=" . URL . "usuarios/sair>Sair</a>
+                            </p>
+                        </span>";
+                    } else { ?>
+                        <span class="navbar-text">
+                            <a class="btn btn-info" href="<?= URL ?>usuarios/cadastrar" data-tooltip="tooltip" title="Não tem uma conta? Cadastre-se">Cadastre-se</a>
+                            <a class="btn btn-info" href="<?= URL ?>usuarios/login" data-tooltip="tooltip" title="Tem uma conta? Fazer login">Entrar</a>
+                        </span>
+                    <?php } ?>
                 </div>
 
             </nav>
