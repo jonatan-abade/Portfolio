@@ -50,4 +50,15 @@ class Usuario
             return false;
         }
     }
+
+
+    public function lerUsuario($id)
+    {
+
+        $this->db->query('SELECT * FROM  usuarios WHERE id = :id');
+
+        $this->db->bind(':id', $id);
+
+        return $this->db->resultado();
+    }
 }

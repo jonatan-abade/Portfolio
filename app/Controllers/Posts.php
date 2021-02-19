@@ -6,11 +6,16 @@ class Posts extends Controller
     {
         Sessao::isLogado();
         $this->postsModel = $this->model('Post');
+
+        $this->usuarioModel = $this->model('Usuario');
     }
 
     public function index()
     {
-        $this->view('posts/index');
+        $dados = [
+            'posts' => $this->postsModel->lerPosts()
+        ];
+        $this->view('posts/index', $dados);
     }
 
     public function cadastrar()
@@ -50,5 +55,17 @@ class Posts extends Controller
 
 
         $this->view('posts/cadastrar', $dados);
+    }
+
+    public function post($id)
+    {
+        $post = $this->postsModel->lerPost($id);
+        $usuario = $this->usuarioModel->lerUsuario($post->usuario_id);
+
+        $dados = [
+            'posts' => $post,
+            'usuario' => $usuario
+        ];
+        $this->view('posts/post', $dados);
     }
 }

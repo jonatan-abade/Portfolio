@@ -33,6 +33,9 @@ $db = new Database();
                         <li class="nav-item">
                             <a class="nav-link" href="<?= URL ?>paginas/sobre" data-tooltip="tooltip" title="Página Inicial">Sobre nós</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= URL ?>posts" data-tooltip="tooltip" title="Página Inicial">Meus Projetos</a>
+                        </li>
                     </ul>
 
                     <?php
