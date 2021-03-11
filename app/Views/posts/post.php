@@ -15,6 +15,23 @@
         </div>
         <div class="card-footer text-muted">
             Escrito por: <?= $dados['usuario']->nome ?> em <?= $dados['posts']->criado_em ?>
+            <br>
+            <br>
+            <?php
+            if ($dados['posts']->usuario_id == $_SESSION['usuario_id']) { ?>
+                <ul class="list-inline center">
+                    <li class="list-inline-item">
+                        <a class="btn btn-sm btn-primary" href="<?= URL ?>posts/editar/<?= $dados['posts']->id ?>">Editar</a>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <form action="<?= URL . 'posts/excluir/' . $dados['posts']->id ?>" method="POST">
+                            <button type="type" type="submit" class="btn btn-sm btn-danger">Excluir</button>
+                        </form>
+                    </li>
+                </ul>
+
+            <?php } ?>
         </div>
     </div>
 </div>

@@ -3,6 +3,7 @@ include './../app/config.php';
 include './../app/autoload.php';
 
 $db = new Database();
+
 ?>
 
 <!DOCTYPE html>
