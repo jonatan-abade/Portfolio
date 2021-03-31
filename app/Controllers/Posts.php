@@ -4,7 +4,6 @@ class Posts extends Controller
 {
     public function __construct()
     {
-        Sessao::isLogado();
         $this->postsModel = $this->model('Post');
 
         $this->usuarioModel = $this->model('Usuario');
@@ -20,7 +19,7 @@ class Posts extends Controller
 
     public function cadastrar()
     {
-
+        Sessao::isLogado();
         $form = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
         if (isset($form)) {
             $dados = [

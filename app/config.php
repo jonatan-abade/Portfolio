@@ -20,7 +20,7 @@ define('APP',  dirname(__FILE__));
 
 define('URL', 'http://localhost/Portfolio/');
 
-define('APP_NOME', 'PHP 7 Orientado a objetos / MVC');
+define('APP_NOME', 'Portfólio | Jonatan Abade');
 
 define('VERSAO', '1.0');
 

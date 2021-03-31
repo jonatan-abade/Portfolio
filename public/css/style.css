@@ -1,0 +1,20 @@
+a.navbar-brand.text-danger.fs-3 {
+    background-color: #ff00009c;
+    color: white !important;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+.pouso {
+    animation: 500ms pouso;
+}
+
+@keyframes pouso {
+    from {
+        margin-top: -7.5%;
+        opacity: 0;
+    }
+    to {
+        margin-top: 0%;
+        opacity: 1;
+    }
+}

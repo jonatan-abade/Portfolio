@@ -1,16 +1,27 @@
 <div class="container p-5">
-    <div class="row">
-        <div class="col-md-8">
-            <h1 class="my-5"><?= APP_NOME ?></h1>
-            <p>Este é um projeto prático desenvolvido no curso de PHP Orientado a Objetos do Unset. Além de todos os conceitos essenciais do PHP aprendidos durante o curso, neste projeto aprendemos a implementar os conceitos e funcionalidades do padrão de projetos MVC(Model-View-Control) em uma aplicação real e auto escalável, tudo de maneira simples e fácil.
-            </p>
-        </div>
-        <div class="col-md-4 text-center">
+    <h1 class="pouso text-white"><?= APP_NOME ?></h1>
+    <p class="text-white">Seja bem-vindo ao meu portfólio, fique a vontade.</p>
 
-            <div class="img-fluid logo">
-                <img width="100%" height="auto" src="<?= URL ?>public/img/codigo-php.png" alt="<?= APP_NOME ?>" title="<?= APP_NOME ?>">
+
+    <h4 class="mt-5 mb-1 text-white">Veja alguns dos meu ultimos projetos</h4>
+    <hr class="bg-danger">
+    <div class="card-group row justify-content-between">
+        <?php foreach ($dados['posts'] as $post) { ?>
+            <div class="card m-1 bg-secondary">
+                <img src="https://picsum.photos/536/354" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="<?= URL . 'posts/post/' . $post->postID ?>" class=" text-white text-decoration-underline"><?= $post->titulo ?></a></h5>
+                    <p class="card-text  text-white"><?= $post->texto ?></p>
+
+                </div>
+                <div class="card-footer">
+                    <p class="card-text"><small class="text-white"><?= $post->criado_em ?> por
+                            <a class="text-reset fw-bold"><?= $post->nome ?></a></small></p>
+                </div>
             </div>
-        </div>
+        <?php } ?>
     </div>
-
+    <div class="row">
+        <button type="button" class="btn btn-light col-3 m-auto">Ver Todos</button>
+    </div>
 </div>

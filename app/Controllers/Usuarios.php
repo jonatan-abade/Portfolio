@@ -9,6 +9,7 @@ class Usuarios extends Controller
 
     public function cadastrar()
     {
+        Sessao::isLogado();
         $form = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
         if (isset($form)) {
             $dados = [

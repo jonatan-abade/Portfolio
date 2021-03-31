@@ -18,10 +18,10 @@ $db = new Database();
 </head>
 
 <body>
-    <header class="bg-dark">
+    <header class="bg-secondary">
         <div class="container">
             <nav class="navbar navbar-expand-sm navbar-dark">
-                <a class="navbar-brand" href="<?= URL ?>">Jonatan Abade</a>
+                <a class="navbar-brand text-danger fs-3" href="<?= URL ?>"><b>Jonatan Abade</b></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -47,14 +47,9 @@ $db = new Database();
                                 <a class='btn btn-sm btn-danger' href=" . URL . "usuarios/sair>Sair</a>
                             </p>
                         </span>";
-                    } else { ?>
-                        <span class="navbar-text">
-                            <a class="btn btn-info" href="<?= URL ?>usuarios/cadastrar" data-tooltip="tooltip" title="Não tem uma conta? Cadastre-se">Cadastre-se</a>
-                            <a class="btn btn-info" href="<?= URL ?>usuarios/login" data-tooltip="tooltip" title="Tem uma conta? Fazer login">Entrar</a>
-                        </span>
-                    <?php } ?>
+                    } ?>
                 </div>
 
             </nav>
     </header>
-    <div class="container">
+    <div class="bg-dark">

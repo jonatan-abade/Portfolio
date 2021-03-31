@@ -1,6 +1,6 @@
 <div class="container py-5">
     <?= Sessao::mensagem('post') ?>
-    <div class="card">
+    <div class="card pouso">
         <div class="card-header bg-info text-white">
             Postagens
             <div class="float-right">

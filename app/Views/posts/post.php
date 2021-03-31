@@ -6,7 +6,7 @@
             <li class="breadcrumb-item active" aria-current="page"><?= $dados['posts']->titulo ?></a></li>
         </ol>
     </nav>
-    <div class="card my-5">
+    <div class="card py-5">
         <div class="card-header">
             <?= $dados['posts']->titulo ?>
         </div>
@@ -18,7 +18,7 @@
             <br>
             <br>
             <?php
-            if ($dados['posts']->usuario_id == $_SESSION['usuario_id']) { ?>
+            if (isset($_SESSION['usuario_id'])){ ?>
                 <ul class="list-inline center">
                     <li class="list-inline-item">
                         <a class="btn btn-sm btn-primary" href="<?= URL ?>posts/editar/<?= $dados['posts']->id ?>">Editar</a>

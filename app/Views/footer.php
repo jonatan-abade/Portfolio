@@ -1,11 +1,8 @@
         </div>
-        <footer class="bg-dark p-5 text-light">
-            <small>
-                PHP 7 orientado a objetos e MVC versão <?= VERSAO ?>
+        <footer class="bg-secondary p-5 text-light">
+            <small>Porfólio Jonatan Abade <?= VERSAO ?>
                 <hr class="bg-light">
-
-                <?= date('Y') ?> &copy; Jonatan Abade | Todos os direitos reservados
-
+                <?= date('Y') ?> &copy; Todos os direitos reservados
             </small>
 
         </footer>

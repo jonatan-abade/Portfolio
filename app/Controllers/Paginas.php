@@ -5,10 +5,10 @@ class Paginas extends Controller
 
     public function index()
     {
-        $dados = [
-            'titulo' => 'Pagina inicial',
-            'descricao' => 'Aprendendo mvc em php',
+        $this->postsModel = $this->model('Post');
 
+        $dados = [
+            'posts' => $this->postsModel->lerPosts()
         ];
         $this->view('paginas/home', $dados);
     }
