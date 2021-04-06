@@ -22,6 +22,6 @@
         <?php } ?>
     </div>
     <div class="row">
-        <button type="button" class="btn btn-light col-3 m-auto">Ver Todos</button>
+        <a href="posts" class="btn btn-light col-3 m-auto">Ver Todos</a>
     </div>
 </div>

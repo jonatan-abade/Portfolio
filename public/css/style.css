@@ -1,9 +1,3 @@
-a.navbar-brand.text-danger.fs-3 {
-    background-color: #ff00009c;
-    color: white !important;
-    padding: 5px 10px;
-    border-radius: 3px;
-}
 .pouso {
     animation: 500ms pouso;
 }
@@ -16,5 +10,59 @@ a.navbar-brand.text-danger.fs-3 {
     to {
         margin-top: 0%;
         opacity: 1;
+    }
+}
+
+a.navbar-brand.text-danger.fs-3::before {
+    background-color: #ff00009c;
+    color: white !important;
+    content: "jonatan abade";
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 3px;
+    animation: writename 500ms alternate;
+    transform: rotateY(0deg);
+}
+
+
+@keyframes writename {
+    0% {
+        content: "j";
+    }
+    7.5% {
+        content: "jo";
+    }
+    15% {
+        content: "jon";
+    }
+    22.5% {
+        content: "jona";
+    }
+    30% {
+        content: "jonat";
+    }
+    37.5% {
+        content: "jonata";
+    }
+    45% {
+        content: "jonatan";
+    }
+    52.5% {
+        content: "jonatan ";
+    }
+    60% {
+        content: "jonatan a";
+    }
+    67.5% {
+        content: "jonatan ab";
+    }
+    75% {
+        content: "jonatan aba";
+    }
+    82.5% {
+        content: "jonatan abad";
+    }
+    100% {
+        content: "jonatan abade";
     }
 }

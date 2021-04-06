@@ -4,6 +4,6 @@
     RewriteBase /Portfolio/public
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !F
-    RewriteCond %{REQUEST_FILENAME} !\.(css|png)$
+    RewriteCond %{REQUEST_FILENAME} !\.(css|png|js)$
     RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
 </IfModule>
